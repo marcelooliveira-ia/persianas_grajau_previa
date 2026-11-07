@@ -1,2 +1,187 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>Persianas Grajaú · Semana 2</title></head><body style="font-family:sans-serif;padding:24px"><h1>Persianas Grajaú</h1><p>Arquivos de trabalho.</p></body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Persianas Grajaú · Prévia de aprovação · Semana 09 a 14/11</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#e9e6df;color:#111;display:flex;align-items:center;justify-content:center}
+.phone{position:relative;width:390px;height:844px;max-height:calc(100vh - 24px);background:#fff;border-radius:44px;border:10px solid #111;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.28)}
+@media(max-width:520px){body{display:block;background:#fff}.phone{width:100%;height:100%;max-height:none;border:0;border-radius:0;box-shadow:none}}
+.view{position:absolute;inset:0;display:none;flex-direction:column;background:#fff}
+.view.on{display:flex}
+.scroll{flex:1;overflow-y:auto;overscroll-behavior:contain}
+.topbar{height:48px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-weight:700;font-size:18px;border-bottom:1px solid #efefef}
+.topbar small{font-weight:500;color:#8e8e8e;font-size:12px}
+.back{background:none;border:0;font-size:26px;line-height:1;cursor:pointer;padding:0 8px 0 0}
+.prof{display:flex;align-items:center;gap:22px;padding:16px 16px 6px}
+.ring{width:86px;height:86px;border-radius:50%;padding:3px;background:conic-gradient(#f9ce34,#ee2a7b,#6228d7,#f9ce34);cursor:pointer;flex:none;border:0}
+.ring img{width:100%;height:100%;border-radius:50%;border:3px solid #fff;object-fit:cover;display:block}
+.stats{display:flex;flex:1;justify-content:space-around;text-align:center;font-size:13px;color:#262626}
+.stats b{display:block;font-size:17px}
+.bio{padding:6px 16px 12px;font-size:13.5px;line-height:1.45;white-space:pre-line}
+.bio b{display:block}
+.note{margin:0 16px 12px;padding:10px 12px;background:#fff8e1;border:1px solid #f3dd9a;border-radius:10px;font-size:12.5px;line-height:1.4;color:#5b4a0a}
+.tabs{display:flex;border-top:1px solid #dbdbdb}
+.tabs div{flex:1;text-align:center;padding:10px 0;border-top:1px solid #111;margin-top:-1px}
+.tabs svg{width:22px;height:22px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.cell{position:relative;aspect-ratio:3/4;background:#ddd;cursor:pointer;overflow:hidden}
+.cell img{width:100%;height:100%;object-fit:cover;display:block}
+.cell .ic{position:absolute;top:7px;right:7px;width:19px;height:19px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+.cell .dt{position:absolute;left:0;right:0;bottom:0;padding:14px 6px 5px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:10.5px;font-weight:600}
+.hd{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.hd img{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1px solid #efefef}
+.hd b{font-size:13.5px;display:block}.hd span{font-size:11.5px;color:#8e8e8e}
+.media{position:relative;background:#000;overflow:hidden}
+.media.c{touch-action:pan-y}
+.track{display:flex;transition:transform .28s ease}
+.track>*{flex:none;width:100%;display:block;object-fit:cover}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.88);border:0;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.arrow.l{left:8px}.arrow.r{right:8px}
+.cnt{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:#fff;font-size:12px;padding:3px 9px;border-radius:14px}
+.mute{position:absolute;right:10px;bottom:10px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.6);border:0;color:#fff;font-size:14px;cursor:pointer}
+.acts{display:flex;align-items:center;gap:14px;padding:10px 12px 4px}
+.acts svg{width:25px;height:25px}
+.acts .sp{flex:1}
+.dots{display:flex;gap:4px;justify-content:center;position:absolute;left:0;right:0;margin-top:-18px;pointer-events:none}
+.dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55)}.dots i.on{background:#0095f6}
+.cap{padding:2px 12px 10px;font-size:13.5px;line-height:1.42;white-space:pre-line;word-break:break-word}
+.cap b.u{margin-right:5px}
+.cap .more{color:#8e8e8e;cursor:pointer}
+.cap .tag{color:#00376b}
+.when{padding:0 12px 14px;font-size:11px;color:#8e8e8e;text-transform:uppercase;letter-spacing:.2px}
+.bar{flex:none;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid #efefef;background:#fff}
+.bar a{flex:1;text-align:center;text-decoration:none;font-weight:600;font-size:14px;padding:11px 8px;border-radius:10px}
+.bar .ok{background:#0095f6;color:#fff}
+.bar .adj{background:#efefef;color:#111}
+.story{background:#000;color:#fff}
+.story .bar{background:#111;border-color:#222}.story .bar .adj{background:#2b2b2b;color:#fff}
+.sbars{display:flex;gap:4px;padding:10px 10px 6px;flex:none}
+.sbars i{flex:1;height:2.5px;background:rgba(255,255,255,.35);border-radius:2px;overflow:hidden}
+.sbars i b{display:block;height:100%;width:0;background:#fff}
+.shd{display:flex;align-items:center;gap:9px;padding:2px 12px 8px;flex:none}
+.shd img{width:30px;height:30px;border-radius:50%}
+.shd b{font-size:13px}.shd span{font-size:12px;opacity:.75;margin-left:6px}
+.shd .x{margin-left:auto;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+.svid{flex:1;min-height:0;position:relative;display:flex;align-items:center;justify-content:center;background:#000}
+.svid video{max-width:100%;max-height:100%;aspect-ratio:9/16;height:100%;object-fit:contain}
+.tap{position:absolute;top:0;bottom:0;width:38%;z-index:2;cursor:pointer}.tap.l{left:0}.tap.r{right:0}
+.hint{text-align:center;font-size:11.5px;color:#9a9a9a;padding:0 0 6px}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+
+<!-- PERFIL -->
+<section class="view on" id="v-profile">
+  <div class="topbar"><span>persianasgrajau</span><small>Prévia de aprovação</small></div>
+  <div class="scroll">
+    <div class="prof">
+      <button class="ring" id="ring" aria-label="Ver stories"><img src="assets/avatar.jpg" alt="Persianas Grajaú"></button>
+      <div class="stats"><div><b>3</b>publicações</div><div><b>5</b>stories</div><div><b>2.585</b>seguidores</div></div>
+    </div>
+    <div class="bio"><b>Persianas Grajaú</b>Cortinas e persianas sob medida, projeto personalizado e instalação profissional.
+Showroom: Rua Emília Sampaio, 96 · Vila Isabel
+WhatsApp (21) 96988-6511</div>
+    <div class="note"><b>Como ver:</b> toque na foto do perfil para assistir aos 5 stories e toque em cada publicação para ver a arte completa com a legenda. Em cada peça, use <b>Aprovar</b> ou <b>Pedir ajuste</b>. Publicações programadas de 09 a 14/11.</div>
+    <div class="tabs"><div><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- POST -->
+<section class="view" id="v-post">
+  <div class="topbar"><button class="back" id="pback" aria-label="Voltar">‹</button><span style="flex:1;font-size:16px">Publicação</span></div>
+  <div class="scroll" id="pscroll"></div>
+  <div class="bar" id="pbar"></div>
+</section>
+
+<!-- STORY -->
+<section class="view story" id="v-story">
+  <div class="sbars" id="sbars"></div>
+  <div class="shd"><img src="assets/avatar.jpg" alt=""><b>persianasgrajau</b><span id="swhen"></span><button class="x" id="sx" aria-label="Fechar">×</button></div>
+  <div class="svid" id="svid"><div class="tap l" id="tl"></div><div class="tap r" id="tr"></div></div>
+  <div class="bar" id="sbar"></div>
+</section>
+
+</div>
+<script>
+var WA="5521990800215";
+var CAP={
+reel:"Quem decide a hora de acordar: você ou o sol?\n\nA Cortina Blackout bloqueia a entrada de luz e cria um ambiente confortável para o descanso, de manhã cedo ou no meio da tarde. Uma ótima escolha para quartos, home office e salas de TV, com design moderno e grande variedade de tecidos e acabamentos.\n\nFeita sob medida para a sua janela, com projeto personalizado e instalação profissional.\n\nPeça seu orçamento.\nWhatsApp (21) 96988-6511 · (21) 2577-2423\nShowroom: Rua Emília Sampaio, 96 · Vila Isabel, Rio de Janeiro\n\n#persianasgrajau #cortinablackout #cortinassobmedida #controledaluminosidade #quartodecorado #decoracao #ambientesplanejados",
+car:"Cortinas e persianas: qual modelo combina com a sua janela?\n\nEntre as cortinas, o Voil suaviza a luz e deixa a decoração mais leve, e o Linho traz textura natural e aconchego. Entre as persianas, a Horizontal permite ajustar a claridade com precisão e garante privacidade, e a Vertical valoriza janelas altas e grandes vãos, com visual moderno e organizado.\n\nNa Persianas Grajaú, cada projeto é sob medida, com acabamento impecável e instalação profissional. Mais de quatro décadas de tradição para ajudar você a escolher o modelo e o tecido ideais.\n\nPeça seu orçamento e transforme o seu ambiente.\nWhatsApp (21) 96988-6511 · (21) 2577-2423\nShowroom: Rua Emília Sampaio, 96 · Vila Isabel, Rio de Janeiro\n\n#persianasgrajau #cortinavoil #cortinadelinho #persianahorizontal #persianavertical #cortinassobmedida #decoracao #ambientesplanejados",
+mos:"Ventilação natural, sem convidar os insetos.\n\nA Tela Mosquiteiro permite manter janelas e portas abertas para o ar circular, com proteção contra a entrada de insetos e acabamento discreto, que preserva a vista e a luz do ambiente. Uma solução prática para sala, quarto, cozinha e varanda.\n\nSob medida para cada vão, com projeto personalizado e instalação profissional.\n\nPeça seu orçamento.\nWhatsApp (21) 96988-6511 · (21) 2577-2423\nShowroom: Rua Emília Sampaio, 96 · Vila Isabel, Rio de Janeiro\n\n#persianasgrajau #telamosquiteiro #ventilacaonatural #conforto #decoracao #sobmedida #ambientesplanejados"};
+var POSTS=[
+ {id:"mos",nome:"Post · Tela Mosquiteiro",when:"Sexta, 13 de novembro · 19h30",type:"img",files:["2026-11-13_post_mosquiteiro.jpg"],cap:CAP.mos},
+ {id:"car",nome:"Carrossel · Cortinas e persianas",when:"Quarta, 11 de novembro · 19h30",type:"car",files:["2026-11-11_carrossel_1_capa.jpg","2026-11-11_carrossel_2_voil.jpg","2026-11-11_carrossel_3_linho.jpg","2026-11-11_carrossel_4_horizontal.jpg","2026-11-11_carrossel_5_vertical.jpg","2026-11-11_carrossel_6_cta.jpg"],cap:CAP.car},
+ {id:"reel",nome:"Reel · Cortina Blackout",when:"Segunda, 09 de novembro · 19h30",type:"reel",files:["2026-11-09_reel_blackout"],cap:CAP.reel}
+];
+var STORIES=[
+ {f:"2026-11-10_story_reel_parte1",nome:"Story · Blackout (parte 1)",when:"Ter 10/11 · 19h30"},
+ {f:"2026-11-10_story_reel_parte2",nome:"Story · Blackout (parte 2)",when:"Ter 10/11 · 19h35"},
+ {f:"2026-11-12_story_linho",nome:"Story · Cortina de Linho",when:"Qui 12/11 · 19h30"},
+ {f:"2026-11-14_story_mosquiteiro",nome:"Story · Tela Mosquiteiro",when:"Sáb 14/11 · 08h30"}
+];
+
+var $=function(i){return document.getElementById(i)};
+function wa(txt){return "https://wa.me/"+WA+"?text="+encodeURIComponent(txt)}
+function bar(el,nome){el.innerHTML='<a class="ok" target="_blank" rel="noopener" href="'+wa("Olá Marcelo! Aprovado: "+nome+" (Persianas Grajaú).")+'">Aprovar</a><a class="adj" target="_blank" rel="noopener" href="'+wa("Olá Marcelo! Gostaria de ajustar: "+nome+" (Persianas Grajaú). Ajuste: ")+'">Pedir ajuste</a>'}
+function show(v){["profile","post","story"].forEach(function(x){$("v-"+x).classList.toggle("on",x===v)});if(v!=="story")stopStory()}
+var IC_MULTI='<svg class="ic" viewBox="0 0 24 24" fill="#fff"><path d="M4 7h12v14H4z" opacity=".9"/><path d="M8 3h13v14h-2V5H8z"/></svg>';
+var IC_REEL='<svg class="ic" viewBox="0 0 24 24" fill="#fff"><path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm5 5v8l6-4z"/></svg>';
+/* grade */
+$("grid").innerHTML=POSTS.map(function(p,i){var th=p.type==="reel"?"assets/"+p.files[0]+"_poster.jpg":"assets/"+p.files[0];return '<div class="cell" data-i="'+i+'"><img src="'+th+'" alt="" loading="lazy">'+(p.type==="car"?IC_MULTI:p.type==="reel"?IC_REEL:"")+'<div class="dt">'+p.when.split(",")[1].split("·")[0].trim()+'</div></div>'}).join("");
+$("grid").addEventListener("click",function(e){var c=e.target.closest(".cell");if(c)openPost(+c.dataset.i)});
+/* post */
+var cur=0,idx=0;
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function tagify(s){return esc(s).replace(/(#\w+)/g,'<span class="tag">$1</span>')}
+function openPost(i){
+ cur=i;idx=0;var p=POSTS[i],h='';
+ h+='<div class="hd"><img src="assets/avatar.jpg" alt=""><div><b>persianasgrajau</b><span>Rio de Janeiro · '+p.nome+'</span></div></div>';
+ if(p.type==="reel"){h+='<div class="media"><video id="pv" src="assets/'+p.files[0]+'.mp4" poster="assets/'+p.files[0]+'_poster.jpg" playsinline loop autoplay style="width:100%;aspect-ratio:9/16;display:block;background:#000;object-fit:cover"></video><button class="mute" id="mu">🔊</button></div>'}
+ else{h+='<div class="media c" id="md"><div class="track" id="tk">'+p.files.map(function(f){return '<img src="assets/'+f+'" alt="" style="aspect-ratio:4/5">'}).join("")+'</div>'+(p.files.length>1?'<div class="cnt" id="ct">1/'+p.files.length+'</div><button class="arrow l" id="al" style="display:none">‹</button><button class="arrow r" id="ar">›</button>':'')+'</div>'+(p.files.length>1?'<div class="dots" id="dt">'+p.files.map(function(_,k){return '<i class="'+(k?'':'on')+'"></i>'}).join("")+'</div>':'')}
+ h+='<div class="acts"><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 018-3 4.6 4.6 0 018 3c0 5.800-8 11-8 11z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M21 12a8 8 0 01-11.600 7.100L4 20l1-4.800A8 8 0 1121 12z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M22 3L10 14M22 3l-7 18-5-7-7-5z"/></svg><span class="sp"></span><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div>';
+ var first=p.cap.split("\n")[0];
+ h+='<div class="cap" id="cp"><b class="u">persianasgrajau</b>'+tagify(first)+' <span class="more" id="mo">… mais</span></div><div class="when">'+p.when+' · prévia</div>';
+ $("pscroll").innerHTML=h;$("pscroll").scrollTop=0;bar($("pbar"),p.nome+" ("+p.when.split("·")[0].trim()+")");
+ var mo=$("mo");mo.onclick=function(){$("cp").innerHTML='<b class="u">persianasgrajau</b>'+tagify(p.cap)};
+ if(p.type==="reel"){var v=$("pv"),m=$("mu");v.muted=true;v.play().catch(function(){});m.onclick=function(){v.muted=!v.muted;m.textContent=v.muted?"🔇":"🔊";if(!v.muted)v.play()};m.textContent="🔇"}
+ else if(p.files.length>1){setupCar(p.files.length)}
+ show("post");
+}
+function setupCar(n){
+ var tk=$("tk"),md=$("md");
+ function go(k){idx=Math.max(0,Math.min(n-1,k));tk.style.transform="translateX(-"+idx*100+"%)";$("ct").textContent=(idx+1)+"/"+n;$("al").style.display=idx?"flex":"none";$("ar").style.display=idx<n-1?"flex":"none";[].forEach.call($("dt").children,function(d,j){d.className=j===idx?"on":""})}
+ $("al").onclick=function(){go(idx-1)};$("ar").onclick=function(){go(idx+1)};
+ var x0=null;md.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});
+ md.addEventListener("touchend",function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(idx+(d<0?1:-1));x0=null});
+}
+$("pback").onclick=function(){var v=$("pv");if(v)v.pause();show("profile")};
+/* stories */
+var si=0,sv=null,raf=0;
+function stopStory(){cancelAnimationFrame(raf);if(sv){sv.pause();sv.remove();sv=null}}
+function openStory(i){
+ stopStory();si=i;var s=STORIES[i];
+ $("sbars").innerHTML=STORIES.map(function(_,k){return '<i><b style="width:'+(k<i?100:0)+'%"></b></i>'}).join("");
+ $("swhen").textContent=s.when;
+ sv=document.createElement("video");sv.src="assets/"+s.f+".mp4";sv.poster="assets/"+s.f+"_poster.jpg";sv.playsinline=true;sv.setAttribute("playsinline","");$("svid").insertBefore(sv,$("svid").firstChild);
+ bar($("sbar"),s.nome+" ("+s.when+")");
+ var fill=$("sbars").children[i].firstChild;
+ sv.play().catch(function(){sv.muted=true;sv.play().catch(function(){})});
+ function tick(){if(sv&&sv.duration)fill.style.width=(sv.currentTime/sv.duration*100)+"%";raf=requestAnimationFrame(tick)}tick();
+ sv.onended=function(){next()};
+ show("story");
+}
+function next(){if(si<STORIES.length-1)openStory(si+1);else{show("profile")}}
+function prev(){openStory(Math.max(0,si-1))}
+$("ring").onclick=function(){openStory(0)};
+$("tr").onclick=next;$("tl").onclick=prev;$("sx").onclick=function(){show("profile")};
+document.addEventListener("keydown",function(e){if(!$("v-story").classList.contains("on"))return;if(e.key==="ArrowRight")next();if(e.key==="ArrowLeft")prev();if(e.key==="Escape")show("profile")});
+</script>
+</body>
+</html>
